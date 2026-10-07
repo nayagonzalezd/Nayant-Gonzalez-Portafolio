@@ -1,0 +1,362 @@
+/* FUENTES */
+
+@font-face {
+    font-family: "Neuropol";
+    src: url("fonts/Neuropol.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Usuzi";
+    src: url("fonts/Usuzi.ttf") format("truetype");
+}
+
+
+/* COLORES DE LA MARCA */
+
+:root {
+    --black: #09090B;
+    --purple: #7C3AED;
+    --fuchsia: #E11D8D;
+    --light-gray: #D4D4D8;
+    --white: #FFFFFF;
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--light-gray);
+    font-family: "Inria Serif", serif;
+}
+
+
+/* INICIO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124, 58, 237, 0.15),
+            transparent 45%
+        ),
+        var(--black);
+}
+
+.hero-content {
+    max-width: 1100px;
+}
+
+
+/*SYSTEM INITIALIZING */
+
+.system-text {
+    font-family: "Usuzi", sans-serif;
+
+    color: var(--fuchsia);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+/* NAYA GONZÁLEZ */
+
+.hero h1 {
+    font-family: "Usuzi", sans-serif;
+
+    color: var(--purple);
+
+    font-size: clamp(3.5rem, 10vw, 8rem);
+
+    letter-spacing: 5px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 10px rgba(124, 58, 237, 0.4),
+        0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+
+/* FULL STACK DEVELOPER*/
+
+.profession {
+    font-family: "Neuropol", sans-serif;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+
+    letter-spacing: 6px;
+
+    margin-top: 25px;
+}
+
+
+/* FRASE PRINCIPAL*/
+
+.idea-text {
+    font-family: "Inria Serif", serif;
+
+    color: var(--light-gray);
+
+    font-size: 1.4rem;
+
+    font-style: italic;
+
+    margin-top: 50px;
+}
+
+
+/* SECCIONES */
+
+.portfolio-section {
+
+    min-height: 80vh;
+
+    padding: 120px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-top: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+
+/* LEVELS*/
+
+.level {
+
+    font-family: "Usuzi", sans-serif;
+
+    color: var(--fuchsia);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULOS GRANDES*/
+
+.portfolio-section h2 {
+
+    font-family: "Usuzi", sans-serif;
+
+    color: var(--purple);
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    letter-spacing: 2px;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+
+/* TEXTO DE LAS SECCIONES */
+
+.portfolio-section > p:not(.level) {
+
+    max-width: 750px;
+
+    font-family: "Inria Serif", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.8;
+}
+
+
+/* LEVEL 01 — THE IDEA*/
+
+#idea {
+    background-color: var(--black);
+}
+
+
+/* LEVEL 02 — THE CREATION */
+
+#creation {
+
+    background-color: #0F0F14;
+}
+
+
+/*SKILLS */
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.skills span {
+
+    font-family: "Usuzi", sans-serif;
+
+    color: var(--white);
+
+    border: 1px solid var(--purple);
+
+    padding: 12px 20px;
+
+    letter-spacing: 2px;
+
+    transition: all 0.3s ease;
+}
+
+.skills span:hover {
+
+    background-color: var(--purple);
+
+    color: var(--white);
+
+    box-shadow:
+        0 0 15px rgba(124, 58, 237, 0.5);
+
+    transform: translateY(-3px);
+}
+
+
+/* LEVEL 03 — THE PROJECT */
+
+#project {
+
+    background-color: var(--black);
+
+}
+
+
+/* LEVEL 04 — THE EXPERIENCE */
+
+#experience {
+
+    background-color: #0F0F14;
+
+}
+
+
+/*    LEVEL 05 — THE FUTURE */
+
+.future {
+
+    text-align: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124, 58, 237, 0.12),
+            transparent 50%
+        ),
+        var(--black);
+}
+
+
+/* Título THE FUTURE */
+
+.future h2 {
+
+    color: var(--white);
+
+}
+
+
+/* LET'S BRING YOUR IDEA TO LIFE */
+
+.future-text {
+
+    font-family: "Inria Serif", serif;
+
+    color: var(--fuchsia);
+
+    font-size: 1.8rem !important;
+
+    font-style: italic;
+
+    margin-bottom: 35px;
+}
+
+
+/*  BOTÓN LET'S TALK */
+
+.contact-button {
+
+    font-family: "Usuzi", sans-serif;
+
+    background-color: var(--fuchsia);
+
+    color: var(--white);
+
+    border: none;
+
+    padding: 15px 35px;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.contact-button:hover {
+
+    background-color: var(--purple);
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 25px rgba(124, 58, 237, 0.5);
+}
+
+
+/* EFECTO DE SELECCIÓN DE TEXTO */
+
+::selection {
+
+    background-color: var(--fuchsia);
+
+    color: var(--white);
+}
+
+
