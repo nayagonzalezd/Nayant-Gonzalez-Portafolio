@@ -28,7 +28,7 @@ Inria Serif
 
 # Tecnologías
 
-HTML5
+HTML
 CSS
 Bootstrap
 Git
