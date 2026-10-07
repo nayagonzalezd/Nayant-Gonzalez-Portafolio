@@ -29,7 +29,7 @@ Inria Serif
 # Tecnologías
 
 HTML5
-CSS3
+CSS
 Bootstrap
 Git
 GitHub
