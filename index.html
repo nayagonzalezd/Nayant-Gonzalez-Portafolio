@@ -1,276 +1,559 @@
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Naya González. Ingeniera ambiental y desarrolladora Full Stack Java.">
 
-    <meta name="description" content="Naya Gonzalez — Full Stack Java Developer. Turning ideas into digital experiences.">
+    <title>Naya González | Más allá del origen</title>
 
-    <title>Naya Gonzalez | The Dream Architect</title>
-
-    <!-- Google Fonts -->
+    <!-- Tipografías cinematográficas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- CSS -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Custom cursor -->
+    <!-- CURSOR -->
     <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <div class="cursor-ring"></div>
 
-    <!-- Background effects -->
-    <div class="background">
-        <div class="grid-overlay"></div>
-        <div class="glow glow-one"></div>
-        <div class="glow glow-two"></div>
-        <div class="particles" id="particles"></div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#home" class="logo">NG<span>.</span></a>
-
-        <div class="nav-links" id="navLinks">
-            <a href="#about">ABOUT</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#experience">EXPERIENCE</a>
-            <a href="#contact">CONTACT</a>
+    <!-- TRANSICIÓN CINEMATOGRÁFICA -->
+    <div class="transition-screen" id="transitionScreen">
+        <div class="transition-tunnel">
+            <div class="tunnel-ring ring-one"></div>
+            <div class="tunnel-ring ring-two"></div>
+            <div class="tunnel-ring ring-three"></div>
         </div>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+        <div class="transition-center">
+            <span class="transition-symbol">◎</span>
+            <p id="transitionText">Cambiando de nivel...</p>
+        </div>
+    </div>
 
-    <main>
 
-        <!-- LEVEL 00 -->
-        <section id="home" class="hero">
+    <!-- NAVEGACIÓN -->
+    <header class="header">
 
-            <div class="hero-content">
+        <a href="#inicio" class="brand">
+            <span class="brand-symbol">◇</span>
 
-                <p class="system-text reveal">
-                    <span class="status-dot"></span>
-                    SYSTEM INITIALIZING...
-                </p>
+            <span class="brand-text">
+                <strong>NAYA GONZÁLEZ</strong>
+                <small>FULL STACK DEVELOPER</small>
+            </span>
+        </a>
 
-                <p class="hero-label reveal">
-                    WELCOME TO MY DIGITAL UNIVERSE
-                </p>
+        <nav class="main-nav">
+            <a href="#inicio" class="nav-link active">Inicio</a>
+            <a href="#esencia" class="nav-link">Mi esencia</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
 
-                <h1 class="hero-title reveal">
-                    NAYA
-                    <span>GONZÁLEZ</span>
+        <div class="header-controls">
+            <button class="sound-button" id="soundButton" aria-label="Activar sonido">
+                ♫ <span>Sonido</span>
+            </button>
+
+            <button class="fullscreen-button" id="fullscreenButton" aria-label="Pantalla completa">
+                ⛶
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- NAVEGADOR DE NIVELES -->
+    <aside class="level-navigation">
+
+        <div class="level-symbol">◎</div>
+
+        <div class="level-track">
+
+            <button class="level-button active" data-target="inicio">
+                <span class="level-dot"></span>
+                <span>Nivel 0</span>
+            </button>
+
+            <button class="level-button" data-target="esencia">
+                <span class="level-dot"></span>
+                <span>Nivel 1</span>
+            </button>
+
+            <button class="level-button" data-target="proyectos">
+                <span class="level-dot"></span>
+                <span>Nivel 2</span>
+            </button>
+
+            <button class="level-button" data-target="habilidades">
+                <span class="level-dot"></span>
+                <span>Nivel 3</span>
+            </button>
+
+            <button class="level-button" data-target="contacto">
+                <span class="level-dot"></span>
+                <span>Nivel 4</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main id="portfolio">
+
+
+        <!-- =====================================
+             NIVEL 0 · ENTRADA
+        ====================================== -->
+
+        <section class="level-section entrance-section" id="inicio" data-level="0">
+
+            <div class="scene-image entrance-image"></div>
+            <div class="scene-shade"></div>
+
+            <div class="floating-particles"></div>
+
+            <div class="entrance-content">
+
+                <span class="eyebrow">UN UNIVERSO DE POSIBILIDADES</span>
+
+                <h1>
+                    Todo comienza<br>
+                    con una <em>idea.</em>
                 </h1>
 
-                <div class="hero-line"></div>
-
-                <h2 class="profession reveal">
-                    FULL STACK <span>JAVA DEVELOPER</span>
-                </h2>
-
-                <p class="idea-text reveal">
-                    Every great project starts with an idea.
-                    <br>
-                    Every idea deserves to become reality.
+                <p class="entrance-description">
+                    A veces, las mejores ideas aparecen cuando
+                    nos atrevemos a imaginar más allá de lo conocido.
                 </p>
 
-                <div class="hero-actions reveal">
-                    <a href="#about" class="primary-button">
-                        ENTER THE DREAM <span>↗</span>
-                    </a>
+                <button class="outline-button enter-origin" data-target="esencia">
+                    ENTRAR AL ORIGEN
+                    <span>→</span>
+                </button>
 
-                    <a href="#projects" class="secondary-button">
-                        EXPLORE MY WORK
-                    </a>
+            </div>
+
+            <div class="entrance-person"></div>
+
+            <div class="scroll-cue">
+                <span>DESCIENDE AL SUEÑO</span>
+                <span class="scroll-arrow">↓</span>
+            </div>
+
+            <span class="scene-coordinate">40°42' N — 74°00' W</span>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TRANSICIÓN ENTRE NIVELES
+        ====================================== -->
+
+        <div class="transition-marker" aria-hidden="true">
+            <span>CAMBIANDO DE NIVEL</span>
+            <span>◎</span>
+        </div>
+
+
+
+        <!-- =====================================
+             NIVEL 1 · MI ESENCIA
+        ====================================== -->
+
+        <section class="level-section essence-section" id="esencia" data-level="1">
+
+            <div class="scene-image essence-image"></div>
+            <div class="scene-shade"></div>
+
+            <div class="essence-person"></div>
+
+            <div class="essence-content">
+
+                <span class="eyebrow">01 / MI ENFOQUE</span>
+
+                <h2>
+                    Creatividad,<br>
+                    pensamiento visual<br>
+                    y <em>tecnología.</em>
+                </h2>
+
+                <p>
+                    Soy Naya González, ingeniera ambiental y
+                    desarrolladora Full Stack Java en formación.
+                </p>
+
+                <p>
+                    Mi camino combina el pensamiento analítico,
+                    la creatividad y la curiosidad por construir
+                    soluciones digitales.
+                </p>
+
+                <p>
+                    Me gusta explorar, experimentar y transformar
+                    ideas en experiencias con propósito.
+                </p>
+
+                <div class="essence-values">
+
+                    <div class="value-item">
+                        <span>♧</span>
+                        <small>CREAR</small>
+                    </div>
+
+                    <div class="value-item">
+                        <span>⌘</span>
+                        <small>DESARROLLAR</small>
+                    </div>
+
+                    <div class="value-item">
+                        <span>✧</span>
+                        <small>DISEÑAR</small>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="hero-index">
-                <span>00 / 05</span>
-                <span>THE AWAKENING</span>
-            </div>
-
-            <div class="scroll-indicator">
-                <span>SCROLL TO DESCEND</span>
-                <div class="scroll-line"></div>
-            </div>
-
-            <div class="hero-orb"></div>
-
         </section>
 
-        <!-- LEVEL 01 -->
-        <section id="about" class="portfolio-section reveal-section">
 
-            <p class="level">LEVEL 01 — THE IDEA</p>
 
-            <h2>Beyond the <span>ordinary.</span></h2>
+        <!-- =====================================
+             NIVEL 2 · PROYECTOS
+        ====================================== -->
 
-            <div class="about-content">
-                <p>
-                    I am a Full Stack Java Developer in training
-                    with a background in Environmental Engineering.
-                    I combine analytical thinking, creativity and
-                    problem-solving to build digital experiences.
-                </p>
+        <section class="level-section projects-section" id="proyectos" data-level="2">
+
+            <div class="scene-image projects-image"></div>
+            <div class="scene-shade"></div>
+
+            <div class="projects-heading">
+
+                <span class="eyebrow">02 / MIS PROYECTOS</span>
+
+                <h2>
+                    Ideas que<br>
+                    <em>toman forma.</em>
+                </h2>
 
                 <p>
-                    My journey is driven by curiosity, continuous
-                    learning and the desire to transform ideas
-                    into meaningful technological solutions.
+                    Diferentes mundos, una misma intención:
+                    convertir ideas en soluciones digitales.
                 </p>
-            </div>
-
-        </section>
-
-        <!-- LEVEL 02 -->
-        <section id="skills" class="portfolio-section reveal-section">
-
-            <p class="level">LEVEL 02 — THE CREATION</p>
-
-            <h2>My <span>universe.</span></h2>
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-                    <span class="skill-number">01</span>
-                    <h3>FRONTEND</h3>
-                    <p>HTML5 · CSS3 · JavaScript · Bootstrap</p>
-                </article>
-
-                <article class="skill-card">
-                    <span class="skill-number">02</span>
-                    <h3>BACKEND</h3>
-                    <p>Java · Spring Boot · JPA · REST APIs</p>
-                </article>
-
-                <article class="skill-card">
-                    <span class="skill-number">03</span>
-                    <h3>DATABASE & TESTING</h3>
-                    <p>MySQL · Postman</p>
-                </article>
-
-                <article class="skill-card">
-                    <span class="skill-number">04</span>
-                    <h3>TOOLS</h3>
-                    <p>Git · GitHub</p>
-                </article>
 
             </div>
 
-        </section>
 
-        <!-- LEVEL 03 -->
-        <section id="projects" class="portfolio-section reveal-section">
+            <div class="project-universes">
 
-            <p class="level">LEVEL 03 — THE PROJECTS</p>
+                <!-- LOGRA -->
+                <article class="universe-card logra-card">
 
-            <h2>Ideas into <span>reality.</span></h2>
+                    <div class="universe-icon">◎</div>
 
-            <p class="section-description">
-                A selection of projects where creativity meets code.
-            </p>
+                    <span class="universe-number">01</span>
 
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <span class="project-category">01 / WEB DEVELOPMENT</span>
                     <h3>LOGRA</h3>
-                    <p>A task management application designed to organize activities and track progress.</p>
-                    <span class="project-stack">JAVASCRIPT · HTML · CSS</span>
-                    <a href="https://github.com/nayagonalezd/Logra--proyecto--individual-" target="_blank" rel="noopener noreferrer">EXPLORE PROJECT ↗</a>
+
+                    <p>
+                        Gestor de tareas<br>
+                        productivo y visual.
+                    </p>
+
+                    <div class="universe-tags">
+                        JavaScript · HTML · CSS
+                    </div>
+
+                    <a href="PEGA_AQUI_EL_ENLACE_DE_LOGRA"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Ver proyecto LOGRA">↗</a>
+
                 </article>
 
-                <article class="project-card">
-                    <span class="project-category">02 / E-COMMERCE & DESIGN</span>
+
+                <!-- LUMINA -->
+                <article class="universe-card lumina-card">
+
+                    <div class="universe-icon">♧</div>
+
+                    <span class="universe-number">02</span>
+
                     <h3>LUMINA</h3>
-                    <p>A digital experience and product catalog created for a candle brand.</p>
-                    <span class="project-stack">HTML · CSS · JAVASCRIPT</span>
-                    <a href="#contact">PROJECT DETAILS ↗</a>
+
+                    <p>
+                        Bienestar, rituales<br>
+                        y experiencias.
+                    </p>
+
+                    <div class="universe-tags">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                    <a href="PEGA_AQUI_EL_ENLACE_DE_LUMINA"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Ver proyecto LUMINA">↗</a>
+
                 </article>
 
-                <article class="project-card">
-                    <span class="project-category">03 / WEB DEVELOPMENT</span>
+
+                <!-- POKÉDEX -->
+                <article class="universe-card pokedex-card">
+
+                    <div class="universe-icon">◉</div>
+
+                    <span class="universe-number">03</span>
+
                     <h3>POKÉDEX</h3>
-                    <p>A web project exploring interactive interfaces and futuristic visual design.</p>
-                    <span class="project-stack">JAVASCRIPT · HTML · CSS</span>
-                    <a href="#contact">PROJECT DETAILS ↗</a>
+
+                    <p>
+                        Exploración interactiva<br>
+                        mediante APIs.
+                    </p>
+
+                    <div class="universe-tags">
+                        JavaScript · API REST
+                    </div>
+
+                    <a href="PEGA_AQUI_EL_ENLACE_DE_POKEDEX"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Ver proyecto Pokedex">↗</a>
+
+                </article>
+
+
+                <!-- TRENDY SHOP -->
+                <article class="universe-card trendy-card">
+
+                    <div class="universe-icon">◇</div>
+
+                    <span class="universe-number">04</span>
+
+                    <h3>TRENDY SHOP</h3>
+
+                    <p>
+                        Tienda digital<br>
+                        moderna y funcional.
+                    </p>
+
+                    <div class="universe-tags">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                    <a href="PEGA_AQUI_EL_ENLACE_DE_TRENDY_SHOP"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Ver proyecto Trendy Shop">↗</a>
+
                 </article>
 
             </div>
 
         </section>
 
-        <!-- LEVEL 04 -->
-        <section id="experience" class="portfolio-section reveal-section">
 
-            <p class="level">LEVEL 04 — THE EXPERIENCE</p>
 
-            <h2>Different paths. <span>One vision.</span></h2>
+        <!-- =====================================
+             NIVEL 3 · HABILIDADES
+        ====================================== -->
 
-            <div class="experience-card">
-                <span>ENVIRONMENTAL ENGINEERING</span>
-                <h3>My professional foundation</h3>
+        <section class="level-section skills-section" id="habilidades" data-level="3">
+
+            <div class="scene-image skills-image"></div>
+            <div class="scene-shade"></div>
+
+            <div class="skills-introduction">
+
+                <span class="eyebrow">03 / MI KIT</span>
+
+                <h2>
+                    Mi kit<br>
+                    <em>creativo.</em>
+                </h2>
+
                 <p>
-                    My engineering background strengthened my analytical
-                    thinking, information management, teamwork and
-                    problem-solving abilities.
+                    Herramientas y conocimientos que utilizo
+                    para dar vida a nuevas ideas.
                 </p>
+
             </div>
 
-            <div class="experience-card">
-                <span>SOFTWARE DEVELOPMENT</span>
-                <h3>My new dimension</h3>
-                <p>
-                    Currently developing my skills in Full Stack Java
-                    through technical training and collaborative projects.
-                </p>
+
+            <div class="skills-panel">
+
+                <div class="skill-row">
+                    <div class="skill-icon">
+                        <i class="devicon-html5-plain"></i>
+                    </div>
+
+                    <div class="skill-description">
+                        <span>Frontend</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skill-row">
+                    <div class="skill-icon">
+                        <i class="devicon-java-plain"></i>
+                    </div>
+
+                    <div class="skill-description">
+                        <span>Desarrollo Backend Java</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skill-row">
+                    <div class="skill-icon">
+                        <i class="devicon-spring-original"></i>
+                    </div>
+
+                    <div class="skill-description">
+                        <span>Spring Boot y JPA</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-progress="65"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skill-row">
+                    <div class="skill-icon">
+                        <i class="devicon-mysql-original"></i>
+                    </div>
+
+                    <div class="skill-description">
+                        <span>Bases de datos</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skill-row">
+                    <div class="skill-icon">
+                        <i class="devicon-github-original"></i>
+                    </div>
+
+                    <div class="skill-description">
+                        <span>Git y GitHub</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skill-row">
+                    <div class="skill-icon">
+                        <i class="devicon-postman-plain"></i>
+                    </div>
+
+                    <div class="skill-description">
+                        <span>APIs REST y Postman</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </section>
 
-        <!-- LEVEL 05 -->
-        <section id="contact" class="portfolio-section future reveal-section">
 
-            <p class="level">LEVEL 05 — THE FUTURE</p>
 
-            <h2>Let's create <span>something extraordinary.</span></h2>
+        <!-- =====================================
+             NIVEL 4 · CONEXIÓN
+        ====================================== -->
 
-            <p class="future-text">
-                Have an idea? Let's bring it to life.
-            </p>
+        <section class="level-section contact-section" id="contacto" data-level="4">
 
-            <a href="mailto:your-email@example.com" class="primary-button">
-                LET'S TALK ↗
-            </a>
+            <div class="scene-image contact-image"></div>
+            <div class="scene-shade"></div>
 
-            <div class="social-links">
-                <a href="https://github.com/nayagonalezd" target="_blank" rel="noopener noreferrer">GITHUB</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <div class="contact-person"></div>
+
+            <div class="contact-content">
+
+                <span class="eyebrow">04 / EL SIGUIENTE NIVEL</span>
+
+                <h2>
+                    Hablemos<br>
+                    de <em>ideas.</em>
+                </h2>
+
+                <p>
+                    Todo gran proyecto comienza con una conversación.
+                    Me encantaría conocer el siguiente reto.
+                </p>
+
+                <a href="mailto:TU_CORREO_AQUI" class="outline-button">
+                    CONECTEMOS
+                    <span>→</span>
+                </a>
+
+                <div class="contact-socials">
+
+                    <a href="PEGA_AQUI_TU_GITHUB"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">
+                        <i class="devicon-github-original"></i>
+                    </a>
+
+                    <a href="PEGA_AQUI_TU_LINKEDIN"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+
+                    <a href="mailto:TU_CORREO_AQUI"
+                       aria-label="Correo electrónico">
+                        ✉
+                    </a>
+
+                </div>
+
             </div>
+
+            <footer class="portfolio-footer">
+                <span>© <span id="currentYear"></span> NAYA GONZÁLEZ</span>
+                <span>EL VIAJE CONTINÚA...</span>
+                <a href="#inicio">VOLVER AL ORIGEN ↑</a>
+            </footer>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>© <span id="year"></span> NAYA GONZÁLEZ</p>
-        <p>DESIGNED IN A DREAM. BUILT WITH CODE.</p>
-    </footer>
 
-    <!-- JavaScript -->
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
